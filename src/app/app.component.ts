@@ -14,7 +14,6 @@ export class AppComponent implements OnInit {
   title = 'topic-maker';
 
   ngOnInit(): void {
-    console.log(this.router.url);
   }
 
   checkPagePosition(routeName: string): boolean {
