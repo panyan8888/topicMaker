@@ -1,0 +1,44 @@
+.location-content{
+  display: flex;
+  flex-direction: column;
+  .title{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .description{
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  label{
+    margin-bottom: 10px;
+  }
+  select{
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  input{
+    outline: none;
+    padding: 5px;
+    margin-bottom: 30px;
+  }
+  .error{
+    font-size: 12px;
+    color: #ff0000;
+    margin-bottom: 20px;
+  }
+  .map-area {
+    height: 500px;
+    width: 515px !important;
+  }
+  button{
+    margin-top: 30px;
+    border: none;
+    padding: 10px 0;
+    background-color: #000;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    max-width: 50%;
+    margin-bottom: 30px;
+  }
+}

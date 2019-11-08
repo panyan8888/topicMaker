@@ -1,0 +1,133 @@
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+      height: 15px;
+      margin-right: 10px;
+    }
+  }
+
+  .middle-part {
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      font-size: 20px;
+      margin-bottom: 30px;
+      span{
+        img{
+          height: 15px;
+          width: 15px;
+        }
+      }
+    }
+  }
+
+  .selected {
+    font-weight: bold;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+
+    .first-section {
+      display: flex;
+
+      .first-section-part {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .name {
+          margin-bottom: 20px;
+          font-weight: bold;
+        }
+
+        .data {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .second-section {
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .data {
+        margin-top: 10px;
+      }
+    }
+
+    .third-section {
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .data {
+        margin-top: 10px;
+      }
+    }
+
+    .fourth-section {
+      display: flex;
+      flex-direction: column;
+
+      .title {
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      .social-icons {
+        display: flex;
+
+        img {
+          height: 15px;
+          width: 15px;
+          margin-right: 10px;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+
+      .subscribe {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+
+        .title {
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        input {
+          outline: none;
+          border: none;
+          border-bottom: 1px solid #d3d3d3;
+        }
+      }
+    }
+  }
+}

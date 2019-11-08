@@ -1,0 +1,26 @@
+<div class="topic-content-root">
+  <span class="title">Topic content</span>
+  <span class="description">
+    Give name to the topic that will attract as many people as possible.
+    The mor
+  </span>
+  <div class="topic-form">
+    <label>Title</label>
+    <input type="text" placeholder="Write title" [(ngModel)]="topicService.topicData.title"/>
+    <div class="topic-description">
+      <label>Description</label>
+      <span>min 500 simbols</span>
+    </div>
+    <textarea type="text" placeholder="Topic description" [(ngModel)]="topicService.topicData.description"></textarea>
+    <label>Rough project budget</label>
+    <input type="number" placeholder="Write amount" [(ngModel)]="topicService.topicData.amount"/>
+    <div class="checkbox">
+      <input type="checkbox"/>
+      <label>I am not sure how much amount is required</label>
+    </div>
+    <span *ngIf="this.hasFrontErrors" class="error">You must fill all fields</span>
+    <button (click)="fillTopic()">
+      CONTINUE
+    </button>
+  </div>
+</div>

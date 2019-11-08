@@ -1,0 +1,15 @@
+<div class="preview">
+  <span class="page-title">Preview</span>
+  <img class="image" [src]="topicService.topicData.file"/>
+  <figure>
+    <img src=""/>
+    <span class="name">Anna Smith</span>
+  </figure>
+  <div class="parent-description">
+    <span class="title">{{topicService.topicData.title}}</span>
+  </div>
+  <div class="parent-description">
+    <span class="description">{{topicService.topicData.description}}</span>
+  </div>
+  <button (click)="publish()">PUBLISH</button>
+</div>

@@ -1,0 +1,47 @@
+.preview{
+  display: flex;
+  flex-direction: column;
+  .page-title{
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .image{
+    height: 200px;
+    width: 200px;
+  }
+  figure{
+    margin: 0;
+    padding: 20px;
+  }
+  .parent-description{
+    display: flex;
+    span{
+      max-width: 550px;
+      word-break: break-word;
+    }
+  }
+  .name{
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .title{
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .description{
+
+  }
+  button{
+    margin-top: 50px;
+    border: none;
+    padding: 10px 0;
+    background-color: #000;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    max-width: 50%;
+    margin-bottom: 30px;
+  }
+}

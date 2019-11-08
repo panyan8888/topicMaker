@@ -1,0 +1,25 @@
+<div class="login-wrapper">
+  <div class="login-content">
+    <span class="title">Sign in</span>
+    <span class="description">Enter your email and password and login in your account</span>
+    <div class='full-input'>
+      <span>Email</span>
+      <input type="email" name="email" maxlength="49" (keyup.enter)="login()" [(ngModel)]="loginData.email"/>
+    </div>
+    <div class='full-input'>
+      <span>Password</span>
+      <img *ngIf="!this.togglePassword" (click)="x.type='text'; this.togglePassword = true"
+           src="../../../assets/img/hide-password.png" alt="CLOSE ICON"/>
+      <img *ngIf="this.togglePassword" (click)="x.type='password'; this.togglePassword = false"
+           src="../../../assets/img/show-password.png" alt="CLOSE ICON"/>
+      <input #x type="password" name="password" maxlength="49"
+             (keyup.enter)="login()" [(ngModel)]="loginData.password"/>
+    </div>
+    <span *ngIf="this.hasErrors" class="error">Invalid email or passsword</span>
+    <span *ngIf="this.emptyFields" class="error">You must fill all fields</span>
+    <button (click)="login()">SIGN IN</button>
+  </div>
+  <div class="banner">
+    <img src="../../../assets/img/banner.png" alt="BANNER">
+  </div>
+</div>

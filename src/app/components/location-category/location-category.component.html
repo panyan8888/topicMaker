@@ -1,0 +1,17 @@
+<div class="location-content">
+  <span class="title">Location and category</span>
+  <span class="description">Please select your project category and choose location of your proposed project</span>
+  <label>Category</label>
+  <select (change)="selectCategory($event.target.value)">
+    <ng-container >
+      <option *ngFor="let category of categories" value="{{category.id}}">{{category.name}}</option>
+    </ng-container>
+  </select>
+  <label>Location</label>
+  <input type="text" placeholder="Choose location"/>
+  <span *ngIf="this.hasFrontErrors" class="error">You must fill all fields</span>
+  <div class="map-area" #map style="height: 500px; width: 500px;"></div>
+  <button (click)="continue()">CONTINUE</button>
+</div>
+
+
