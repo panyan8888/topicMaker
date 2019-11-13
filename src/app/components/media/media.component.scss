@@ -9,11 +9,37 @@
     margin-top: 10px;
     margin-bottom: 30px;
   }
-  img{
-    max-width:180px;
-  }
-  input{
+  .image-upload-container {
+    display: flex;
+    align-items: center;
+    .img-container {
+      width: 180px;
+      height: 180px;
+      box-shadow: 5px 10px 18px #d3d3d3
+    }
 
+    .image-upload {
+      display: flex;
+      margin-right: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 180px;
+      background-color: #ffffff;
+      box-shadow: 5px 10px 18px #d3d3d3;
+      label{
+      }
+      img {
+        width: 50px;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+
+      input {
+        display: none;
+      }
+    }
   }
   button{
     margin-top: 30px;

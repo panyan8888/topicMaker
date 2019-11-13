@@ -1,11 +1,18 @@
 <div class="media">
   <span class="title">Media</span>
   <span class="description">Choose images for the overview section of your topic</span>
-  <img id="blah" [src]="imageURL" src="http://placehold.it/180" alt="your image" />
-  <input class="file-input"
-       type="file"
-       name="File"
-       id="file"
-       (change)="onFileInputChange($event)">
+  <div class="image-upload-container">
+    <div class="image-upload">
+      <label for="file">
+        <img src="../../../assets/img/plus.png" alt="PLUS"/>
+      </label>
+      <input class="file-input"
+           type="file"
+           name="File"
+           id="file"
+           (change)="onFileInputChange($event)">
+    </div>
+    <img class="img-container" [src]="imageURL" src="http://placehold.it/180" alt="your image" />
+  </div>
   <button (click)="continue()">CONTINUE</button>
 </div>
