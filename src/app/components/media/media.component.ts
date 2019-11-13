@@ -2,6 +2,7 @@
 import { TopicService } from '../../services/topic.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
+import { stringify } from 'querystring';
 
 
 @Component({
@@ -10,11 +11,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./media.component.scss']
 })
 export class MediaComponent implements OnInit {
+  imageURL: any;
 
   constructor(public topicService: TopicService,
               private router: Router) { }
 
   ngOnInit() {
+    this.imageURL = 'http://placehold.it/180';
   }
   continue() {
     if (this.topicService.topicFormData.has('file')) {
@@ -27,6 +30,9 @@ export class MediaComponent implements OnInit {
       const reader = new FileReader();
       reader.readAsDataURL($event.target.files[0]);
       reader.onload = () => {
+        console.log(this.imageURL);
+        console.log(reader.result);
+        this.imageURL = reader.result;
         this.topicService.topicData.file = reader.result;
       };
     }
