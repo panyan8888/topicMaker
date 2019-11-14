@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BsModalRef } from 'ngx-bootstrap';
 
 @Component({
   selector: 'app-publish-modal',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublishModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(public bsModalRef: BsModalRef) { }
 
   ngOnInit() {
   }
