@@ -12,6 +12,11 @@ import { TopicService } from './services/topic.service';
 import { TopicContentComponent } from './components/topic-content/topic-content.component';
 import { MediaComponent } from './components/media/media.component';
 import { PreviewComponent } from './components/preview/preview.component';
+import { PublishModalComponent } from './modals/publish-modal/publish-modal.component';
+import { BsModalRef, BsModalService, ComponentLoaderFactory, ModalModule, PositioningService } from 'ngx-bootstrap';
+// import { NgbModalBackdrop } from '@ng-bootstrap/ng-bootstrap/modal/modal-backdrop';
+
+
 
 @NgModule({
   declarations: [
@@ -20,15 +25,26 @@ import { PreviewComponent } from './components/preview/preview.component';
     LocationCategoryComponent,
     TopicContentComponent,
     MediaComponent,
-    PreviewComponent
+    PreviewComponent,
+    PublishModalComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    ModalModule,
   ],
-  providers: [LoginService, TopicService],
+  entryComponents: [
+    PublishModalComponent
+  ],
+  providers: [
+    LoginService,
+    TopicService,
+    BsModalService,
+    BsModalRef,
+    ComponentLoaderFactory,
+    PositioningService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

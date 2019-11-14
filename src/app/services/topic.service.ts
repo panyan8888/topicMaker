@@ -14,6 +14,11 @@ export class TopicService {
 
   private urlPrefix = '/api/topic/';
   public topicData: ITopicData = {};
+  config = {
+    backdrop: true,
+    ignoreBackdropClick: true,
+    class: 'modal-dialog-centered modal-md'
+  };
   public topicFormData: FormData = new FormData();
   constructor(private http: HttpClient,
               private loginService: LoginService) {
