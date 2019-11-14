@@ -21,8 +21,14 @@
     }
     .checkbox{
       display: flex;
+      align-items: center;
       input{
         margin-right: 10px;
+        margin-bottom: 0;
+        padding: 0;
+      }
+      label{
+        margin-bottom: 0;
       }
     }
     label{

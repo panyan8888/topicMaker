@@ -1,7 +1,7 @@
 <div class="main-wrapper" *ngIf="loginService?.signedUser?.authToken;else sign_out">
   <header>
-    <img src="../assets/img/search.png" alt="SEARCH ICON"/>
-    <img src="../assets/img/notification.png" alt="NOTIFICATION ICON"/>
+    <i class="fa fa-search"></i>
+    <i class="fa fa-bell"></i>
     <figure>
       <img src=""/>
       <span>Anna Smith</span>
@@ -12,17 +12,18 @@
       <ol>
         <li [ngClass]="{'selected': checkPagePosition('location')}">Category and location
         <span *ngIf="checkPagePosition('topic') || checkPagePosition('media')
-        || checkPagePosition('preview')"><img src="../assets/img/check.png" alt="CHECK"/></span>
+        || checkPagePosition('preview')">
+          <i class="fa fa-check"></i></span>
         </li>
         <li [ngClass]="{'selected': checkPagePosition('topic')}">Topic content
-        <span *ngIf="checkPagePosition('media') || checkPagePosition('preview')"><img src="../assets/img/check.png" alt="CHECK"/></span>
+        <span *ngIf="checkPagePosition('media') || checkPagePosition('preview')">
+          <i class="fa fa-check"></i></span>
         </li>
         <li [ngClass]="{'selected': checkPagePosition('media')}">Media
-        <span *ngIf="checkPagePosition('preview')"><img src="../assets/img/check.png" alt="CHECK"/></span>
+        <span *ngIf="checkPagePosition('preview')">
+          <i class="fa fa-check"></i></span>
         </li>
-        <li [ngClass]="{'selected': checkPagePosition('preview')}">Preview
-<!--        <span *ngIf="checkPagePosition('preview')"><img src="../assets/img/check.png" alt="CHECK"/></span>-->
-        </li>
+        <li [ngClass]="{'selected': checkPagePosition('preview')}">Preview</li>
       </ol>
     </aside>
     <main>
@@ -60,10 +61,10 @@
       <div class="fourth-section">
         <span class="title">Follow us in social</span>
         <div class="social-icons">
-          <img src="../assets/img/facebook.png" alt="FACEBOOK"/>
-          <img src="../assets/img/twitter.png" alt="TWITTER"/>
-          <img src="../assets/img/linkedin.png" alt="LINKEDIN"/>
-          <img src="../assets/img/instagram.png" alt="INSTAGRAM"/>
+          <i class="fa fa-facebook"></i>
+          <i class="fa fa-twitter"></i>
+          <i class="fa fa-linkedin"></i>
+          <i class="fa fa-instagram"></i>
         </div>
         <div class="subscribe">
           <span class="title">Subscribe for new projects</span>
