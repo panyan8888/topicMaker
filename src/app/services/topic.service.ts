@@ -30,11 +30,12 @@ export class TopicService {
     return this.http.get<IResponseModel<Array<ICategoryModel>>>(url, {headers});
   }
 
-  addTopic(data: FormData): Observable<IResponseModel<any>> {
+  addTopic(data): Observable<IResponseModel<any>> {
+    console.log(this.topicData);
     const url = `${this.urlPrefix}`;
     console.log(this.loginService.signedUser.authToken);
     const headers = new HttpHeaders({
-        'Content-Type': 'application/json',
+        // 'Content-Type': 'application/json',
         'language': '1',
         'Authorization': `Bearer ${this.loginService.signedUser.authToken}`
       });

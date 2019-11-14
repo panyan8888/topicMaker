@@ -50,6 +50,7 @@ export class LocationCategoryComponent implements OnInit, OnDestroy {
     }
     if (categoryId) {
       this.topicService.topicFormData.append('categoryId', categoryId);
+      // this.topicService.topicData.append('categoryId', categoryId);
     }
   }
 
